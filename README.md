@@ -22,7 +22,8 @@ Perception System for Autonomous Vehicles Using NVDLA
 - Objective 3
 
 ## Technology Stack:
-(List the hardware platform, software tools, language(s), etc. you plan to use)
+NVDLA, YOLOv5, BDD100K set, Geomatics and Computer Vision set, Cityscapes Set
+
 
 ## Expected Outcomes:
 (Describe what you expect to deliver at the end of the project)
