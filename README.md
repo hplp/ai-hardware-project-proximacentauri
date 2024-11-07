@@ -11,7 +11,7 @@ Proxima Centauri
 - Vishnuvartthan
 
 ## Project Title:
-Integration of NVIDIA Deep Learning Accelerator (NVDLA) with RISC-V SoC 
+Perception System for Autonomous Vehicles Using NVDLA 
 
 ## Project Description:
 (Provide a short description of the problem you're addressing)
