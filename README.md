@@ -22,9 +22,9 @@ Perception System for Autonomous Vehicles Using NVDLA
 - Energy efficiency
 
 ## Technology Stack:
-Platform: NVDLA
-Software: YOLOv5, Python
-Datasets: BDD100K, Geomatics and Computer Vision, Cityscapes
+- Platform: NVDLA
+- Software: YOLOv5, Python
+- Datasets: BDD100K, Geomatics and Computer Vision, Cityscapes
 
 
 ## Expected Outcomes:
