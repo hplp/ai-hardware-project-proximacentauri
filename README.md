@@ -37,8 +37,8 @@ The main steps for implementation are as follows:
 - Software: YOLOv5
 - Languages: Python, verilog, systemC
 - Datasets:
-  - Primary: Geomatics and Computer Vision
-  - Secondary: BDD100K, Cityscapes
+  - Primary: Geomatics and Computer Vision (road level images of drains and manholes)
+  - Secondary: BDD100K (used for finding drivable space on the road), Cityscapes (semantically segmented data of urban areas)
 
 ## Expected Outcomes:
 Have a YOLOv5 based model that 
