@@ -25,15 +25,19 @@ The main steps for implementation are as follows:
 
 
 ## Key Objectives:
-- Improving Computation
+- Implementation of YOLOv5 algorithm on NVDLA
+- Improving Computation 
 - Memory improvements
-- Energy efficiency
+- Improving energy efficiency
 
 ## Technology Stack:
 - Platform: NVDLA
-- Software: YOLOv5, Python
-- Datasets: BDD100K, Geomatics and Computer Vision, Cityscapes
-
+- Supporting Software: Ubuntu to run the NVDLA platform and other supporting drivers
+- Software: YOLOv5
+- Languages: Python, verilog, systemC
+- Datasets:
+  - Primary: Geomatics and Computer Vision
+  - Secondary: BDD100K, Cityscapes
 
 ## Expected Outcomes:
 (Describe what you expect to deliver at the end of the project)
