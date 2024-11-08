@@ -11,7 +11,7 @@ Proxima Centauri
 - Vishnuvartthan
 
 ## Project Title:
-Perception System for Autonomous Vehicles Using NVDLA 
+DrEyeve — Perception System for Autonomous Vehicles Using NVDLA 
 
 ## Project Description:
 (Provide a short description of the problem you're addressing)
