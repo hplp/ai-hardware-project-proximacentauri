@@ -14,7 +14,7 @@ Proxima Centauri
 ```DrEYEve``` — Perception System for Autonomous Vehicles Using NVDLA 
 
 ## Project Description:
-(Provide a short description of the problem you're addressing)
+Autonomous Vehicles are gaining popularity in the world of cars, and self-driven cars are being desired across the globe. With automated driving becoming a plausible feature of the future, we hope to address a key feature that ensures safety and efficiency by detecting objects and obstacles on roads and helps with path planning for vehicles: visual perception. The most important feature that come into play to give a car 'eyes' that are useful is the capability to process images accurately and quickly. This requires a system with high computational power. Since this system is to be deployed in vehicles, a desirable feature is energy efficiency. With high computational power and energy efficiency being the prime target features for improvement, we propose to implement a visual perception system on the Open-source NVDLA platform, using the YOLOv5 object detection algorithm.
 
 ## Key Objectives:
 - Improving Computation
