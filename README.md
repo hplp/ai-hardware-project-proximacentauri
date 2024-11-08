@@ -16,6 +16,14 @@ Proxima Centauri
 ## Project Description:
 Autonomous Vehicles are gaining popularity in the world of cars, and self-driven cars are being desired across the globe. With automated driving becoming a plausible feature of the future, we hope to address a key feature that ensures safety and efficiency by detecting objects and obstacles on roads and helps with path planning for vehicles: visual perception. The most important feature that come into play to give a car 'eyes' that are useful is the capability to process images accurately and quickly. This requires a system with high computational power. Since this system is to be deployed in vehicles, a desirable feature is energy efficiency. With high computational power and energy efficiency being the prime target features for improvement, we propose to implement a visual perception system on the Open-source NVDLA platform, using the YOLOv5 object detection algorithm.
 
+The main steps for implementation are as follows:
+- Choose a pre-trained YOLOv5 model and implement it for the chosen dataset.
+- Convert YOLOv5 to ONNX format.
+- Optimize the model with TensorRT.
+- Load optimized model onto NVDLA platform and run inference.
+- Performance Tuning: Quantization and Profiling
+
+
 ## Key Objectives:
 - Improving Computation
 - Memory improvements
