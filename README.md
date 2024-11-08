@@ -17,12 +17,14 @@ Perception System for Autonomous Vehicles Using NVDLA
 (Provide a short description of the problem you're addressing)
 
 ## Key Objectives:
-- Objective 1
-- Objective 2
-- Objective 3
+- Improving Computation
+- Memory improvements
+- Energy efficiency
 
 ## Technology Stack:
-NVDLA, YOLOv5, BDD100K set, Geomatics and Computer Vision set, Cityscapes Set
+Platform: NVDLA
+Software: YOLOv5, Python
+Datasets: BDD100K, Geomatics and Computer Vision, Cityscapes
 
 
 ## Expected Outcomes:
