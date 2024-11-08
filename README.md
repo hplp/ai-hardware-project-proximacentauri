@@ -32,6 +32,7 @@ The main steps for implementation are as follows:
 
 ## Technology Stack:
 - Platform: NVDLA
+  ![image](https://github.com/user-attachments/assets/4159eab1-7069-4d1e-b506-3d6ce37654ff)
 - Supporting Software: Ubuntu to run the NVDLA platform and other supporting drivers
 - Software: YOLOv5
 - Languages: Python, verilog, systemC
