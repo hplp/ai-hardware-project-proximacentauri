@@ -40,7 +40,11 @@ The main steps for implementation are as follows:
   - Secondary: BDD100K, Cityscapes
 
 ## Expected Outcomes:
-(Describe what you expect to deliver at the end of the project)
+Have a YOLOv5 based model that 
+- is based on NVDLA
+- is energy efficient
+- has the capability to detect objects on the road real-time
+- can be deployed on an autonomous vehicle.
 
 ## Timeline:
 (Provide a rough timeline or milestones for the project)
