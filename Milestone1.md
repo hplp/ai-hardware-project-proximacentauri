@@ -49,11 +49,11 @@ We have chosen two datasets:
 2. A dataset for pothole detection from Roboflow, formatted for YOLOv5 PyTorch. [3]
 
 ## NVDLA Setup (Open source platform):
-To set up the NVDLA platform, refer to the detailed guide provided on the [NVDLA VP setup page](https://nvdla.org/vp.html#using-the-virtual-simulator). Follow the instructions to configure the virtual simulator, ensuring all dependencies and environment settings are correctly implemented.
+To set up the NVDLA platform, refer to the detailed guide provided on the [NVDLA VP setup page](https://nvdla.org/vp.html#using-the-virtual-simulator)[4]. Follow the instructions to configure the virtual simulator, ensuring all dependencies and environment settings are correctly implemented.
 
 It is required to install the platform on Ubuntu 14.04 to ensure that only the compatible versions of all dependencies are installed, as the virtual simulator supports only specific versions and not the latest ones.
 
-#### Downloading the Virtual Simulator
+### Downloading the Virtual Simulator
 ```
 git clone https://github.com/nvdla/vp.git
 cd vp
@@ -61,7 +61,7 @@ git submodule update --init --recursive
 ```
 Errors may occur when updating submodules using the command. This can happen for two reasons: (1) some URLs referenced in the submodules may no longer be in use, and (2) the `git://` protocol does not function behind a firewall. To resolve these issues, the `git://` protocol in the `.../vp/libs/qbox/.gitmodules` file should be replaced with `https://`. The corrected `.gitmodules` file is available at [/qbox/.gitmodules](https://github.com/hplp/ai-hardware-project-proximacentauri/blob/main/qbox/.gitmodules). Replacing the original file with this version will address the errors.
 
-#### Install the dependencies
+### Installing the dependencies
 All necessary dependencies from Section 2.3 of the setup documentation page must be installed. Also, install Verilator and Clang.
 ```
 sudo apt install verilator clang
@@ -72,6 +72,7 @@ which cpp
 ```
 When the NVDLA HW is successfully built, header files and libraries will be generated in the `.../hw/outdir/[project name]/cmod` directory.
 
+### Installing the virtual simulator
 Finally, in the VP repository directory, the following command builds the virtual simulator:
 ```
 cmake -DCMAKE_INSTALL_PREFIX=[install dir] -DSYSTEMC_PREFIX=[systemc prefix] -DNVDLA_HW_PREFIX=[nvdla_hw prefix] -DNVDLA_HW_PROJECT=[nvdla_hw project name]`
@@ -81,10 +82,53 @@ cmake -DCMAKE_INSTALL_PREFIX=[install dir] -DSYSTEMC_PREFIX=[systemc prefix] -DN
 - *[nvdla_hw prefix]*: Directory where the NVDLA HW repository is cloned (e.g., /home/<username>/hw).
 - *[nvdla_hw project name]*: The project name used during the HW build.
 
+Compile and install the virtual simulator.
 ```
 make
 make install
 ```
+
+### Building linux kernel for the virtual simulator
+For Buildroot setup, download buildroot-2017.11-rc1 from [Buildroot](https://buildroot.org/downloads/) and move it to the /home directory. The example from the setup documentation uses this exact version, therefore for compatibility, use the same. 
+```
+cd
+tar -xvf buildroot-2017.11-rc1.tar.bz2
+cd buildroot-2017.11-rc1
+```
+Use qemu_aarch64_virt_defconfig as base configuration, and customize it as given in the documentation
+```
+make qemu_aarch64_virt_defconfig
+make menuconfig
+```
+```
+* Target Options -> Target Architecture -> AArch64 (little endian)
+* Target Options -> Target Architecture Variant -> cortex-A57
+* Toolchain -> Custom kernel headers series -> 4.13.x
+* Toolchain -> Toolchain type -> External toolchain
+* Toolchain -> Toolchain -> Linaro AArch64 2017.08
+* Toolchain -> Toolchain origin -> Toolchain to be downloaded and installed
+* Kernel -> () Kernel version -> 4.13.3
+* Kernel -> Kernel configuration -> Use the architecture default configuration
+* System configuration -> Enable root login with password -> Y
+* System configuration -> Root password -> nvdla
+* Target Packages -> Show packages that are also provided by busybox -> Y
+* Target Packages -> Networking applications -> openssh -> Y
+```
+Build the kernel.
+```
+make -j4
+```
+The `Image` file and `rootfs.ext4` will be generated in `output/image`. Update `vp/conf/aarch64_nvdla.lua` file with the paths to these files.
+
+### Running the Virtual Simulator
+Before running the virtual simulator, set the environment variable `SC_SIGNAL_WRITE_CHECK` to `DISABLE`:
+```
+cd
+cd vp
+export SC_SIGNAL_WRITE_CHECK=DISABLE
+./build/bin/aarch64_toplevel -c conf/aarch64_nvdla.lua
+```
+Demo image account: root, password: nvdla
 
 
 ## Resources:
