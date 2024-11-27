@@ -27,10 +27,12 @@ The main steps for implementation are as follows:
 ## Model Identification and Initial Training:
 For our approach towards the problem, we have started working with the open source code provided in [1]. In this paper, YOLOv3 was found to be the most accurate and fastest model for object detection. Due to this, we have run the YOLOv3 code for the dataset provided, and converted the model to ONNX format, to be deployed on the hardware.
 
-We have also decided to use a more recent version of YOLO: YOLOv5. We have used the YOLOv5 model provided in [2] with the corresponding pretrained weights (trained on the COCO dataset). We have trained YOLOv5 on the dataset for 20 and 100 epochs. The model parameters and initial validation results are detailed in the given figure.
+We have also decided to use a more recent version of YOLO: YOLOv5. We have used the YOLOv5 model provided in [2] with the corresponding pretrained weights (trained on the COCO dataset). We have trained YOLOv5 on the first dataset for 20 epochs and on the second dataset for 100 epochs. The model parameters and initial validation results are detailed in the given figures:
 
+Dataset 1:
 ![image](https://github.com/user-attachments/assets/ae64314c-c512-48da-952e-f7fce90a3c32)
 
+Dataset 2:
 ![image](https://github.com/user-attachments/assets/356441b2-7ac2-4ec2-91bc-cd18a2e334b1)
 
 
@@ -45,8 +47,6 @@ The input node represents the input tensor to the model with dimensions - (batch
 We have chosen two datasets:
 1. An augmented dataset created and provided through the research detailed in [1].
 2. A dataset for pothole detection from Roboflow, formatted for YOLOv5 PyTorch. [3]
-
-Thus far, the training has been done on the first dataset. We plan to run the model on the second datase also.
 
 ## NVDLA Setup (Open source platform):
 
