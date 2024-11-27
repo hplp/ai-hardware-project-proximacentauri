@@ -38,4 +38,4 @@ We have chosen two datasets:
 
 ## Resources:
 1. Rao, S., & Mitnala, N. (2023). Exploring automated object detection methods for manholes using classical computer vision and deep learning. Machine Graphics & Vision, 32(1).
-2. 
+2. https://github.com/ultralytics/yolov5.git
