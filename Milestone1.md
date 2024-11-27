@@ -53,7 +53,7 @@ To set up the NVDLA platform, refer to the detailed guide provided on the [NVDLA
 
 It is required to install the platform on Ubuntu 14.04 to ensure that only the compatible versions of all dependencies are installed, as the virtual simulator supports only specific versions and not the latest ones.
 
-Once the VP repository is cloned from https://github.com/nvdla/vp.git, errors may occur when updating submodules using the command git submodule update --init --recursive. This can happen for two reasons: (1) some URLs referenced in the submodules may no longer be in use, and (2) the git:// protocol does not function behind a firewall. To resolve these issues, the git:// protocol in the .../vp/libs/qbox/.gitmodules file should be replaced with https://. The corrected .gitmodules file is available at this repository link. Replacing the original file with this version will address the errors.
+Once the VP repository is cloned from https://github.com/nvdla/vp.git, errors may occur when updating submodules using the command ```git submodule update --init --recursive```. This can happen for two reasons: (1) some URLs referenced in the submodules may no longer be in use, and (2) the ```git://``` protocol does not function behind a firewall. To resolve these issues, the ```git://``` protocol in the .../vp/libs/qbox/.gitmodules file should be replaced with ```https://```. The corrected .gitmodules file is available at this repository link. Replacing the original file with this version will address the errors.
 
 
 ## Resources:
