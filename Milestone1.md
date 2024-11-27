@@ -27,6 +27,9 @@ The main steps for implementation are as follows:
 ## Model Identification:
 For our approach towards the problem, we have started working with the open source code provided in [1]. In this paper, YOLOv3 was found to be the most accurate and fastest model for object detection. Due to this, we have run the YOLOv3 code for the dataset provided, and converted the model to ONNX format, to be deployed on the hardware.
 
+We have also decided to use a more recent version of YOLO: YOLOv5. We have used the YOLOv5 model provided in [2] with the corresponding pretrained weights (trained on the COCO dataset). We have trained YOLOv5 on the dataset for 20 epochs. The model parameters and initial validation results are detailed in the given figure.
+
+
 ## Dataset:
 We have chosen two datasets:
 1. An augmented dataset created and provided through the research detailed in [1].
