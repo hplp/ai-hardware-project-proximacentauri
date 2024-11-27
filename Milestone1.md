@@ -131,7 +131,7 @@ export SC_SIGNAL_WRITE_CHECK=DISABLE
 Demo image account: root, password: nvdla
 ![Virtual Simulator Run](https://raw.githubusercontent.com/hplp/ai-hardware-project-proximacentauri/refs/heads/main/assets/vsim_run.png)
 
-
+![The End of the Episode](https://media1.tenor.com/m/wyf72idf6d8AAAAC/the-end.gif)
 
 ## Resources:
 1. Rao, S., & Mitnala, N. (2023). Exploring automated object detection methods for manholes using classical computer vision and deep learning. Machine Graphics & Vision, 32(1).
