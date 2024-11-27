@@ -49,7 +49,7 @@ We have chosen two datasets:
 2. A dataset for pothole detection from Roboflow, formatted for YOLOv5 PyTorch. [3]
 
 ## NVDLA Setup (Open source platform):
-To set up the NVDLA platform, refer to the detailed guide provided on the [NVDLA VP setup page](https://nvdla.org/vp.html#using-the-virtual-simulator). Follow the instructions to configure the virtual simulator, ensuring all dependencies and environment settings are correctly implemented.
+To set up the NVDLA platform, refer to the detailed guide provided on the [NVDLA VP setup page](https://nvdla.org/vp.html#using-the-virtual-simulator). Follow the instructions to configure the virtual simulator, ensuring all dependencies and environment settings are correctly implemented, 
 
 
 ## Resources:
