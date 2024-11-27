@@ -25,10 +25,12 @@ The main steps for implementation are as follows:
 
 
 ## Model Identification:
+For our approach towards the problem, we have started working with the open source code provided in [1].
 
 ## Dataset:
 
 ## Initial Training of Model:
 
 ## Resources:
-
+1. Rao, S., & Mitnala, N. (2023). Exploring automated object detection methods for manholes using classical computer vision and deep learning. Machine Graphics & Vision, 32(1).
+2. 
