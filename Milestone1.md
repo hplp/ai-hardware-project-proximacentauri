@@ -30,8 +30,5 @@ The main steps for implementation are as follows:
 
 ## Initial Training of Model:
 
-## Timeline:
-Week 1:	Dataset preparation, initial training of YOLOv5 on dataset.
-Week 2:	Model optimization with TensorRT and conversion to ONNX.
-Week 3:	Apply quantization, configure NVDLA platform, load optimized model, run  initial performance tests.
-Week 4:	Optimization for energy efficiency and parallel processing, final validation, documentation.
+## Resources:
+
