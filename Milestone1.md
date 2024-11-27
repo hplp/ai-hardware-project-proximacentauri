@@ -32,8 +32,6 @@ We have also decided to use a more recent version of YOLO: YOLOv5. We have used 
 
 Using google colab, the YOLOv5 repository was cloned and the required dependencies were installed. A pretrained YOLOv5 model was loaded as the model and was converted to ONNX format. We then verified and visualised the ONNX export using the Netron tool. 
 ![image](https://github.com/user-attachments/assets/0484ee50-2e84-409f-a7b0-78570d45269a)
-![yolov5s onnx](https://github.com/user-attachments/assets/a1c9be23-6577-4fff-8b8a-f946fe85c604)
-
 
 
 ## Dataset:
