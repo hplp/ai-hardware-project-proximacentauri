@@ -38,6 +38,8 @@ We have chosen two datasets:
 
 Thus far, the training has been done on the first dataset. We plan to run the model on the second datase also.
 
+## Hardware Setup:
+
 ## Resources:
 1. Rao, S., & Mitnala, N. (2023). Exploring automated object detection methods for manholes using classical computer vision and deep learning. Machine Graphics & Vision, 32(1).
 2. https://github.com/ultralytics/yolov5.git
