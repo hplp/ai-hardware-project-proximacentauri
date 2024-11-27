@@ -11,7 +11,7 @@ Proxima Centauri
 - Vishnuvartthan
 
 ## Project Title:
-```DrEYEve``` — Perception System for Autonomous Vehicles Using NVDLA 
+`DrEYEve` — Perception System for Autonomous Vehicles Using NVDLA 
 
 ## Project Description:
 Autonomous Vehicles are gaining popularity in the world of cars, and self-driven cars are being desired across the globe. With automated driving becoming a plausible feature of the future, we hope to address a key feature that ensures safety and efficiency by detecting objects and obstacles on roads and helps with path planning for vehicles: visual perception. The most important feature that come into play to give a car 'eyes' that are useful is the capability to process images accurately and quickly. This requires a system with high computational power. Since this system is to be deployed in vehicles, a desirable feature is energy efficiency. With high computational power and energy efficiency being the prime target features for improvement, we propose to implement a visual perception system on the Open-source NVDLA platform, using the YOLOv5 object detection algorithm.
@@ -53,7 +53,27 @@ To set up the NVDLA platform, refer to the detailed guide provided on the [NVDLA
 
 It is required to install the platform on Ubuntu 14.04 to ensure that only the compatible versions of all dependencies are installed, as the virtual simulator supports only specific versions and not the latest ones.
 
-Once the VP repository is cloned from https://github.com/nvdla/vp.git, errors may occur when updating submodules using the command ```git submodule update --init --recursive```. This can happen for two reasons: (1) some URLs referenced in the submodules may no longer be in use, and (2) the ```git://``` protocol does not function behind a firewall. To resolve these issues, the ```git://``` protocol in the .../vp/libs/qbox/.gitmodules file should be replaced with ```https://```. The corrected .gitmodules file is available at this repository link. Replacing the original file with this version will address the errors.
+Once the VP repository is cloned from https://github.com/nvdla/vp.git, errors may occur when updating submodules using the command `git submodule update --init --recursive`. This can happen for two reasons: (1) some URLs referenced in the submodules may no longer be in use, and (2) the `git://` protocol does not function behind a firewall. To resolve these issues, the `git://` protocol in the `.../vp/libs/qbox/.gitmodules` file should be replaced with `https://`. The corrected `.gitmodules` file is available at this repository link. Replacing the original file with this version will address the errors.
+
+All necessary dependencies from Section 2.3 of the setup documentation page must be installed. Also, install Verilator and Clang.
+
+`$ sudo apt install verilator clang`
+
+During the build process for NVDLA CMOD, a name for the hw project, paths for the installed dependencies such as g++, cpp, perl, java, systemc, verilator and clang must be provided. Verification of the paths can be performed as below:
+
+`$ which cpp`
+`/usr/bin/cpp`
+
+When the NVDLA HW is successfully built, header files and libraries will be generated in the `.../hw/outdir/[project name]/cmod` directory.
+
+Finally, in the VP repository directory, the following command builds the virtual simulator:
+
+`$ cmake -DCMAKE_INSTALL_PREFIX=[install dir] -DSYSTEMC_PREFIX=[systemc prefix] -DNVDLA_HW_PREFIX=[nvdla_hw prefix] -DNVDLA_HW_PROJECT=[nvdla_hw project name]`
+
+- *[install dir]*: Directory to install the virtual simulator.
+- *[systemc prefix]*: Path where SystemC is installed (e.g., /usr/local/systemc-2.3.0/).
+- *[nvdla_hw prefix]*: Directory where the NVDLA HW repository is cloned (e.g., /home/<username>/hw).
+- *[nvdla_hw project name]*: The project name used during the HW build.
 
 
 ## Resources:
