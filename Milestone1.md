@@ -34,8 +34,9 @@ We have also decided to use a more recent version of YOLO: YOLOv5. We have used 
 ## Dataset:
 We have chosen two datasets:
 1. An augmented dataset created and provided through the research detailed in [1].
-2. A dataset forpothole detection from Roboflow, formatted for YOLOv3.
+2. A dataset forpothole detection from Roboflow, formatted for YOLOv5. [3]
 
 ## Resources:
 1. Rao, S., & Mitnala, N. (2023). Exploring automated object detection methods for manholes using classical computer vision and deep learning. Machine Graphics & Vision, 32(1).
 2. https://github.com/ultralytics/yolov5.git
+3. https://public.roboflow.com/object-detection/pothole/1
