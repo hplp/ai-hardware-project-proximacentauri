@@ -31,7 +31,7 @@ We have also decided to use a more recent version of YOLO: YOLOv5. We have used 
 ![image](https://github.com/user-attachments/assets/ae64314c-c512-48da-952e-f7fce90a3c32)
 
 
-Using google colab, the YOLOv5 repository was cloned and the required dependencies were installed. A pretrained YOLOv5 model was loaded as the model and was converted to ONNX format. We then verified and visualized the ONNX export using the Netron tool. The image gives us a visualization of the computational graph of the YOLOv5 model and represents the structure of the nueral network - comprising of the layers, operations and connections.
+Using google colab, the YOLOv5 repository was cloned and the required dependencies were installed. A pretrained YOLOv5 model was loaded as the model and was converted to ONNX format. We then verified and visualized the ONNX export using the Netron tool. The image gives us a visualization of the computational graph of the YOLOv5 model and represents the structure of the neural network - comprising of the layers, operations and connections.
 
 ![image](https://github.com/user-attachments/assets/0484ee50-2e84-409f-a7b0-78570d45269a)
 
