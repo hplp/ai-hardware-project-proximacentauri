@@ -24,11 +24,7 @@ The main steps for implementation are as follows:
 - Performance Tuning: Quantization and Profiling
 
 
-## Key Objectives:
-- Implementation of YOLOv5 algorithm on NVDLA
-- Improving Computation 
-- Memory improvements
-- Improving energy efficiency
+## Model Identification:
 
 ## Technology Stack:
 - Platform: NVDLA
