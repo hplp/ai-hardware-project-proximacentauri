@@ -28,12 +28,7 @@ The main steps for implementation are as follows:
 
 ## Dataset:
 
-## Expected Outcomes:
-Have a YOLOv5 based model that 
-- is based on NVDLA
-- is energy efficient
-- has the capability to detect objects on the road real-time
-- can be deployed on an autonomous vehicle.
+## Initial Training of Model:
 
 ## Timeline:
 Week 1:	Dataset preparation, initial training of YOLOv5 on dataset.
