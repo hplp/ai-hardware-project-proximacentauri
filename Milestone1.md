@@ -26,15 +26,7 @@ The main steps for implementation are as follows:
 
 ## Model Identification:
 
-## Technology Stack:
-- Platform: NVDLA
-  ![image](https://github.com/user-attachments/assets/4159eab1-7069-4d1e-b506-3d6ce37654ff)
-- Supporting Software: Ubuntu to run the NVDLA platform and other supporting drivers
-- Software: YOLOv5
-- Languages: Python, verilog, systemC
-- Datasets:
-  - Primary: Geomatics and Computer Vision (road level images of drains and manholes)
-  - Secondary: BDD100K (used for finding drivable space on the road), Cityscapes (semantically segmented data of urban areas)
+## Dataset:
 
 ## Expected Outcomes:
 Have a YOLOv5 based model that 
