@@ -34,7 +34,7 @@ We have also decided to use a more recent version of YOLO: YOLOv5. We have used 
 ## Dataset:
 We have chosen two datasets:
 1. An augmented dataset created and provided through the research detailed in [1].
-2. A dataset forpothole detection from Roboflow, formatted for YOLOv5. [3]
+2. A dataset for pothole detection from Roboflow, formatted for YOLOv5 PyTorch. [3]
 
 Thus far, the training has been done on the first dataset. We plan to run the model on the second datase also.
 
