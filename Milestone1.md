@@ -25,9 +25,12 @@ The main steps for implementation are as follows:
 
 
 ## Model Identification:
-For our approach towards the problem, we have started working with the open source code provided in [1].
+For our approach towards the problem, we have started working with the open source code provided in [1]. In this paper, YOLOv3 was found to be the most accurate and fastest model for object detection. Due to this, we have run the YOLOv3 code for the dataset provided, and converted the model to ONNX format, to be deployed on the hardware.
 
 ## Dataset:
+We have chosen two datasets:
+1. An augmented dataset created and provided through the research detailed in [1].
+2. A dataset forpothole detection from Roboflow, formatted for YOLOv3.
 
 ## Initial Training of Model:
 
