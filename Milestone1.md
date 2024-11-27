@@ -30,7 +30,7 @@ For our approach towards the problem, we have started working with the open sour
 We have also decided to use a more recent version of YOLO: YOLOv5. We have used the YOLOv5 model provided in [2] with the corresponding pretrained weights (trained on the COCO dataset). We have trained YOLOv5 on the dataset for 20 epochs. The model parameters and initial validation results are detailed in the given figure.
 ![image](https://github.com/user-attachments/assets/ae64314c-c512-48da-952e-f7fce90a3c32)
 
-Using google colab, the YOLOv5 repository was cloned and the required dependencies were installed. A pretrained YOLOv5 model was loaded as the model and was converted to ONNX format. We then verified and visulaised the ONNX export using the Netron tool. 
+Using google colab, the YOLOv5 repository was cloned and the required dependencies were installed. A pretrained YOLOv5 model was loaded as the model and was converted to ONNX format. We then verified and visualised the ONNX export using the Netron tool. 
 ![image](https://github.com/user-attachments/assets/0484ee50-2e84-409f-a7b0-78570d45269a)
 ![yolov5s onnx](https://github.com/user-attachments/assets/a1c9be23-6577-4fff-8b8a-f946fe85c604)
 
