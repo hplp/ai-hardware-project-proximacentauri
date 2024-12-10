@@ -35,6 +35,11 @@ Dataset 1:
 Dataset 2:
 ![image](https://github.com/user-attachments/assets/356441b2-7ac2-4ec2-91bc-cd18a2e334b1)
 
+We have also trained the YOLOv5 model on the first dataset for 100 epochs and converted the trained model to the ONNX format. We have recoreded the mAP values over the 100 epochs. The results are seen in the graph below:
+![image](https://github.com/user-attachments/assets/118a4b97-8095-43f1-a7a7-dfd38d92f9f5)
+Key: 
+- Red: mAP @ 0.5
+- Blue: mAP @ 0.5:0.95
 
 
 Using google colab, the YOLOv5 repository was cloned and the required dependencies were installed. A pretrained YOLOv5 model was loaded as the model and was converted to ONNX format. We then verified and visualized the ONNX export using the Netron tool. The image gives us a visualization of the computational graph of the YOLOv5 model and represents the structure of the neural network - comprising of the layers, operations and connections.
