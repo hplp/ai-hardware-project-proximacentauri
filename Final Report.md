@@ -35,18 +35,20 @@ Dataset 1:
 Dataset 2:
 ![image](https://github.com/user-attachments/assets/356441b2-7ac2-4ec2-91bc-cd18a2e334b1)
 
-We have also trained the YOLOv5 model on the first dataset for 100 epochs and converted the trained model to the ONNX format. We have recoreded the mAP values over the 100 epochs. The results are seen in the graph below:
-![image](https://github.com/user-attachments/assets/118a4b97-8095-43f1-a7a7-dfd38d92f9f5)
-Key: 
-- Red: mAP @ 0.5
-- Blue: mAP @ 0.5:0.95
-
 
 Using google colab, the YOLOv5 repository was cloned and the required dependencies were installed. A pretrained YOLOv5 model was loaded as the model and was converted to ONNX format. We then verified and visualized the ONNX export using the Netron tool. The image gives us a visualization of the computational graph of the YOLOv5 model and represents the structure of the neural network - comprising of the layers, operations and connections.
 
 ![image](https://github.com/user-attachments/assets/0484ee50-2e84-409f-a7b0-78570d45269a)
 
 The input node represents the input tensor to the model with dimensions - (batch_size, channels - 3, height - 640, width - 640). The convolutional layers are used for feature extraction and the layers apply filters to the input data followed by activation function. These convolutional layers are followed by batch normalization ('BatchNorm') layers to normalize the output and improve training stability. To introduce non-linearity into the model - the SiLU activation functions are applied after certain layers. The YOLOv5 uses residual connections which makes the gradients flow easily during backpropagation and are reflected as branching paths in the graph. The multiple branches that merge features from different scales are the multi-scale feature detection used by YOLOv5 (Feature Pyramid Network). At the bottom of the graph the detection heads are visible which are responsible for generating predictions (bounding boxes, objectness scores and class probabilities) and these heads map to different scales (small, medium. large objects). 
+
+We have also trained the YOLOv5 model on the first dataset for 100 epochs and converted the trained model to the ONNX format. We have recoreded the mAP values over the 100 epochs. The results are seen in the graph below:
+![image](https://github.com/user-attachments/assets/118a4b97-8095-43f1-a7a7-dfd38d92f9f5)
+Key: 
+- Red: mAP @ 0.5
+- Blue: mAP @ 0.5:0.95
+
+We further ran inference on this model. Without quantization, the inference time was found to be 12.58 s. We then performed Post-Training Quantization using TensorRT. After quantization, the inference time reduced significantly to be 44.56ms.
 
 ## Dataset:
 We have chosen two datasets:
