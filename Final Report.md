@@ -150,6 +150,8 @@ Demo image account: root, password: nvdla
     - With Quantization: 44.56ms (useful for Self-driven vehicles)
 
 ## Challenges Faced:
+- NVDLA requires not an ONNX format model but one in the caffe format. We were unable to find a method to convert the ONNX or PyTorch models that we have trained to the caffe version.
+
 
 ## Resources:
 1. Rao, S., & Mitnala, N. (2023). Exploring automated object detection methods for manholes using classical computer vision and deep learning. Machine Graphics & Vision, 32(1).
