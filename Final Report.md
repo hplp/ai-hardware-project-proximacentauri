@@ -138,6 +138,19 @@ export SC_SIGNAL_WRITE_CHECK=DISABLE
 Demo image account: root, password: nvdla
 ![Virtual Simulator Run](https://raw.githubusercontent.com/hplp/ai-hardware-project-proximacentauri/refs/heads/main/assets/vsim_run.png)
 
+## Results:
+- We were able to train the YOLOv5 model on two different datasets.
+- We were able to measure the accuracy of the model on one of the datasets:
+    - mAP @ 0.5 = 70%
+    - mAP @ 0.5:0.95 = 40%
+- We were able to run inference on the model and found the inference time.
+- We ran Post Training Quantization on the model using TensorRT and found the inference time again.
+- Inference Times:
+    - Without Quantization: 12.58s
+    - With Quantization: 44.56ms (useful for Self-driven vehicles)
+
+## Challenges Faced:
+
 ## Resources:
 1. Rao, S., & Mitnala, N. (2023). Exploring automated object detection methods for manholes using classical computer vision and deep learning. Machine Graphics & Vision, 32(1).
 2. https://github.com/ultralytics/yolov5.git
