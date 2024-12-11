@@ -48,7 +48,7 @@ Key:
 - Red: mAP @ 0.5
 - Blue: mAP @ 0.5:0.95
 
-We further ran inference on this model. Without quantization, the inference time was found to be 12.58 s. We then performed Post-Training Quantization using TensorRT. After quantization, the inference time reduced significantly to be 44.56ms.
+We further ran inference on this model. Without quantization, the inference time was found to be 12.58 s. We then performed Post-Training Quantization using TensorRT. After quantization, the inference time reduced significantly to be 44.56ms. The code containing the model, inference and quantization is given in this repository at [YOLOv5.ipynb]().
 
 ## Dataset:
 We have chosen two datasets:
